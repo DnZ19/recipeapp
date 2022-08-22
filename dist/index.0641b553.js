@@ -542,7 +542,11 @@ let fieldValue = "";
 const getRecipes = async (searchString)=>{
     try {
         const response = await (0, _axiosDefault.default).get(`https://api.edamam.com/search?q=${searchString}&app_id=${APP_ID}&app_key=${APP_KEY}`);
-        console.log(response.data);
+        console.log(response.data.hits);
+        const recipeDisplay = document.getElementById("recipe-idea");
+        recipeDisplay.textContent = response.data.hits[0].recipe.label;
+        const recipeImage = document.createElement("img");
+        recipeImage.setAttribute("src", `response.data.hits[0].recipe.image`);
     } catch (e) {
         console.error(e);
     }

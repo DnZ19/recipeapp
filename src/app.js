@@ -10,7 +10,13 @@ const getRecipes = async ( searchString ) => {
     try {
 
         const response = await axios.get(`https://api.edamam.com/search?q=${searchString}&app_id=${APP_ID}&app_key=${APP_KEY}`);
-        console.log(response.data)
+        console.log(response.data.hits)
+
+        const recipeDisplay = document.getElementById("recipe-idea");
+        recipeDisplay.textContent = response.data.hits[0].recipe.label;
+
+        const recipeImage = document.createElement("img")
+        recipeImage.setAttribute("src", `response.data.hits[0].recipe.image`);
 
     }
 
@@ -39,6 +45,8 @@ function handleSubmit(e){
     e.preventDefault()
     getRecipes(fieldValue);
 }
+
+
 
 
 
