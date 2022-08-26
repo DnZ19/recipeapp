@@ -7,25 +7,57 @@
 </head>
 <body>
 
-<h1>Recipe app</h1>
+<div class="outer-container">
+    <div class="inner-container">
+        <header>
+            <img src="../images/Foodie.svg" alt="" id="header-image">
 
-<h1>Recipe of the Day</h1>
-<p id="recipe"></p>
+        </header>
 
-<form id="search-field-submit">
 
-    <input
-            type="text"
-            name="q"
-            id="search"
-            placeholder="Search"
-    />
+        <article>
+            <form id="search-field-submit">
+<!--                <button type="submit">Search</button>-->
 
-    <button type="submit">Search</button>
-</form>
+<!--                <input-->
+<!--                        type="text"-->
+<!--                        name="q"-->
+<!--                        id="search"-->
+<!--                        placeholder="What food for today..."-->
+<!--                />-->
+                <input id="search" placeholder="What food for today...">
+                <button type="submit">Search</button>
 
-<h1>Recipe Idea:</h1>
-<p id="recipe-idea"></p>
+
+
+            </form>
+
+<!--            body for javascript created html        -->
+
+            <div class="recipe-container">
+                <div id="image-items"></div>
+                <ul id="recipe-items"></ul>
+            </div>
+
+
+
+
+
+        </article>
+
+        <footer>
+            <nav>
+
+            </nav>
+        </footer>
+
+    </div>
+
+</div>
+
+
+
+
 
 
 
